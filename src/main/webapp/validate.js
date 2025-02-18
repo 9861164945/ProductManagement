@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const username = document.querySelector('input[name="uname"]').value.trim();
-    const email = document.querySelector('input[name="email"]').value.trim();
-    const password = document.querySelector('input[name="pword"]').value.trim();
-    const city = document.querySelector('input[name="city"]').value.trim();
-    const fullname = document.querySelector('input[name="fname"]').value.trim();
-    const mobile = document.querySelector('input[name="phno"]').value.trim();
+    const username = document.getElementById("uname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("pword").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const fullname = document.getElementById("fname").value.trim();
+    const mobile = document.getElementById("phno").value.trim();
 
     // Username validation (minimum 3 characters)
     if (username.length < 3) {
@@ -54,6 +54,3 @@ document.addEventListener("DOMContentLoaded", function () {
     form.submit();
   });
 });
-/**
- * 
- */

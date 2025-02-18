@@ -5,10 +5,10 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class AdminBean implements Serializable
 {
-	private String uName,pword,fname,city,email;
+	private String uname,pword,fname,city,email;
 	private long phNo;
 	public String getuName() {
-		return uName;
+		return uname;
 	}
 	public String getPword() {
 		return pword;
@@ -26,7 +26,7 @@ public class AdminBean implements Serializable
 		return phNo;
 	}
 	public void setuName(String uName) {
-		this.uName = uName;
+		this.uname = uName;
 	}
 	public void setPword(String pword) {
 		this.pword = pword;

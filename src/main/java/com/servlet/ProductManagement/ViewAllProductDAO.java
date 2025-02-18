@@ -20,10 +20,10 @@ public class ViewAllProductDAO
 			while(rs.next()) 
 			{
 				ProductBean pb=new ProductBean();
-				pb.setCode(rs.getString(1));
-				pb.setName(rs.getString(2));
-				pb.setPrice(rs.getFloat(3));
-				pb.setQty(rs.getInt(4));
+				pb.setPcode(rs.getString(1));
+				pb.setPname(rs.getString(2));
+				pb.setPprice(rs.getFloat(3));
+				pb.setPqty(rs.getInt(4));
 				al.add(pb);//Bean Added to ArrayList
 				
 				

@@ -22,9 +22,9 @@ out.println("Page Belongs to Admin:"+ab.getFname()+"<br>");
 <form action="update" method="post">
 
 <label for="ProductPrice">Productprice:</label>
-<input type="text"name="pprice" value=<%=pb.getPrice() %>><br>
+<input type="text"name="pprice" value=<%=pb.getPprice() %>><br>
 <label for="ProductQty">ProductQty:</label>
-<input type="text" name="pqty" value=<%=pb.getQty() %>><br>
+<input type="text" name="pqty" value=<%=pb.getPqty() %>><br>
 <button type="submit">UpdateProduct</button>
 </form>
 </div>

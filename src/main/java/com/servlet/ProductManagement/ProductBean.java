@@ -5,37 +5,36 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class ProductBean implements Serializable {
 
-	private String code,name;
-	private float price;
-	private int qty;
+	private String pcode,pname;
+	private float pprice;
+	private int pqty;
 	public ProductBean() 
 	{
 
 	}
-	public String getCode() {
-		return code;
+	public String getPcode() {
+		return pcode;
 	}
-	public String getName() {
-		return name;
+	public String getPname() {
+		return pname;
 	}
-	public float getPrice() {
-		return price;
+	public float getPprice() {
+		return pprice;
 	}
-	public int getQty() {
-		return qty;
+	public int getPqty() {
+		return pqty;
 	}
-	public void setCode(String code) {
-		this.code = code;
+	public void setPcode(String pcode) {
+		this.pcode = pcode;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
-	public void setPrice(float price) {
-		this.price = price;
+	public void setPprice(float pprice) {
+		this.pprice = pprice;
 	}
-	public void setQty(int qty) {
-		this.qty = qty;
+	public void setPqty(int pqty) {
+		this.pqty = pqty;
 	}
 	
-
-}
+	}

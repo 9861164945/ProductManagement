@@ -26,16 +26,21 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	else
 	{
 		ProductBean pb=new ProductBean();//Bean created
-		pb.setCode(req.getParameter("pcode"));
-		pb.setName(req.getParameter("pname"));
-		pb.setPrice( Float.parseFloat(req.getParameter("pprice")));
-		pb.setQty(Integer.parseInt(req.getParameter("pqty")));
+		pb.setPcode(req.getParameter("pcode"));
+		pb.setPname(req.getParameter("pname"));
+		pb.setPprice( Float.parseFloat(req.getParameter("pprice")));
+		pb.setPqty(Integer.parseInt(req.getParameter("pqty")));
 		
 		int k= new AddProductDAO().insert(pb);
 		if(k>0) 
 		{
 			req.setAttribute("msg","Product Added Successfully");
-			req.getRequestDispatcher("AddProduct.jsp").forward(req, resp);	
+			req.getRequestDispatcher("AddProduct.jsp").forward(req, resp);
+		}
+		else
+		{
+			req.setAttribute("msg", "Product Added Failed");
+			System.err.println("Something Went Wrong While Insertion");
 		}
 
 	

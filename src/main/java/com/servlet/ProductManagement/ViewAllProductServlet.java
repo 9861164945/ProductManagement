@@ -4,12 +4,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 @SuppressWarnings("serial")
+@WebServlet("/view")
 public class ViewAllProductServlet extends HttpServlet
 {
 	@Override

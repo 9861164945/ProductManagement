@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 public class DbConnection 
 {
 	private static Connection con=null;
+	@SuppressWarnings("unused")
 	private  void DBonnection() {}
 
 		static//Start Of Static Block 

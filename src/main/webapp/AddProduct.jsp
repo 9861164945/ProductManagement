@@ -15,7 +15,7 @@ out.println("Page Belongs To Admin"+ab.getFname()+"<br>");
 out.println(msg);
 %>
 
-<a href="Product.html">AddProduct:</a>
+<a href="AddProduct.html">AddProduct:</a>
 <a href="view">ViewAllProduct</a>
 <a href="logout">Logout</a>
 </body>

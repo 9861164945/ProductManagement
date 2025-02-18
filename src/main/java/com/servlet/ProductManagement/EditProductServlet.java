@@ -34,7 +34,7 @@ public class EditProductServlet  extends HttpServlet
 			while(it.hasNext()) 
 			{
 				ProductBean pb=(ProductBean)it.next();
-				if(pc.equals(pb.getCode()))
+				if(pc.equals(pb.getPcode()))
 				{
 					req.setAttribute("pbean", pb);
 					req.getRequestDispatcher("EditProduct.jsp").forward(req, resp);
