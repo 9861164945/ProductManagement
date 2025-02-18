@@ -13,7 +13,7 @@
 <body>
 <%
 AdminBean ab=(AdminBean)session.getAttribute("abean");
-ArrayList<ProductBean>al=(ArrayList<ProductBean>)session.getAttribute("alist");1
+ArrayList<ProductBean>al=(ArrayList<ProductBean>)session.getAttribute("alist");
 out.println("Page Belongs to Admin:"+ab.getFname()+"<br>");
 if(al.size()==0)
 {
@@ -31,10 +31,11 @@ else
 		out.println(pb.getCode()+"%nbsp$nbsp"+
 		pb.getName()+"%nbsp$nbsp"+pb.getPrice()+"%nbsp$nbsp"+pb.getQty()+"%nbsp$nbsp"+
 				"<a href='edit'>Edit</a>"+"%nbsp$nbsp"+
-		"<a href='delete'>Delete</a>"+"<br>");
+		            "<a href='delete'>Delete</a>"+"<br>");
 		}
 	}
 %>
+
 <a href="Product.html">AddProduct</a>
 <a href="Logout">Logout</a>
 

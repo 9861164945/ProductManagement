@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .agree-checkbox {
+            margin: 20px 0;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:disabled {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy</h1>
+
+    <p>At <b>Product Management System</b>, we are committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you visit our website or use our services.</p>
+
+    <!-- (Content of Privacy Policy stays the same) -->
+
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page, and the date of the most recent update will be indicated at the top of the page. Please review this policy periodically for any changes.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at:</p>
+    <p id="myInput">Email:<i>2270295@kiit.ac.in</i> <button onclick="myFunction()">Copy text</button> </p>
+    <p>Address: <i>Bhubhaneswar India</i></p>
+
+    <!-- Add checkbox and submit button -->
+    <div class="agree-checkbox">
+        <label>
+            <input type="checkbox" id="agreeCheckbox">
+            I agree with all the terms and conditions.
+        </label>
+    </div>
+    <button id="submitBtn" class="submit-btn" onclick="goBack()" disabled>Submit</button>
+
+    <script type="text/javascript">
+
+        function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
+
+        // Enable the submit button if checkbox is checked
+        document.getElementById("agreeCheckbox").addEventListener('change', function() {
+            document.getElementById("submitBtn").disabled = !this.checked;
+        });
+
+        // Redirect to previous page
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+
+</body>
+</html>
