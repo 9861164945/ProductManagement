@@ -26,7 +26,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	else
 	{
 		ProductBean pb=new ProductBean();//Bean created
-		pb.setPcode(req.getParameter("pcode"));
+		pb.setPcode(Integer.parseInt(req.getParameter("pcode")));
 		pb.setPname(req.getParameter("pname"));
 		pb.setPprice( Float.parseFloat(req.getParameter("pprice")));
 		pb.setPqty(Integer.parseInt(req.getParameter("pqty")));

@@ -20,7 +20,7 @@ public class ViewAllProductDAO
 			while(rs.next()) 
 			{
 				ProductBean pb=new ProductBean();
-				pb.setPcode(rs.getString(1));
+				pb.setPcode(rs.getInt(1));
 				pb.setPname(rs.getString(2));
 				pb.setPprice(rs.getFloat(3));
 				pb.setPqty(rs.getInt(4));

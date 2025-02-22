@@ -1,4 +1,4 @@
-<%@page import="com.servlet.ProductManagement.ProductBean"%>
+ <%@page import="com.servlet.ProductManagement.ProductBean"%>
 <%@page import="com.servlet.ProductManagement.AdminBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -20,6 +20,8 @@ out.println("Page Belongs to Admin:"+ab.getFname()+"<br>");
 %>
 <div class="form-control">
 <form action="update" method="post">
+<input type="hidden" name="pcode" value="<%= pb.getPcode() %>">
+
 
 <label for="ProductPrice">Productprice:</label>
 <input type="text"name="pprice" value=<%=pb.getPprice() %>><br>

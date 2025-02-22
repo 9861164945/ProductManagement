@@ -5,14 +5,15 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class ProductBean implements Serializable {
 
-	private String pcode,pname;
+	private int pcode;
+	private String pname;
 	private float pprice;
 	private int pqty;
 	public ProductBean() 
 	{
 
 	}
-	public String getPcode() {
+	public int getPcode() {
 		return pcode;
 	}
 	public String getPname() {
@@ -24,7 +25,7 @@ public class ProductBean implements Serializable {
 	public int getPqty() {
 		return pqty;
 	}
-	public void setPcode(String pcode) {
+	public void setPcode(int pcode) {
 		this.pcode = pcode;
 	}
 	public void setPname(String pname) {

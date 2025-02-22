@@ -13,10 +13,13 @@ public class AddProductDAO
 			Connection con=DbConnection.getCon();
 			PreparedStatement ps=con.prepareStatement("insert into Product79 values(?,?,?,?)");
 
-			ps.setString(1, pb.getPcode());
+			ps.setInt(1, pb.getPcode());
 			ps.setString(2, pb.getPname());
 			ps.setFloat(3, pb.getPprice());
 			ps.setInt(4, pb.getPqty());
+			
+			 k=ps.executeUpdate();
+			
 			
 		} catch (Exception e) 
 		{

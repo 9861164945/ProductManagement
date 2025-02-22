@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/edit")
 public class EditProductServlet  extends HttpServlet
 {
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "unlikely-arg-type" })
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -29,12 +29,13 @@ public class EditProductServlet  extends HttpServlet
 		else
 		{
 			ArrayList<ProductBean>al=(ArrayList<ProductBean>)hs.getAttribute("alist");
-			String pc=req.getParameter("pcode");
+			int pc=Integer.parseInt(req.getParameter("pcode"));
+			System.out.println(pc);
 			Iterator<ProductBean>it=al.iterator();
 			while(it.hasNext()) 
 			{
 				ProductBean pb=(ProductBean)it.next();
-				if(pc.equals(pb.getPcode()))
+				if(pc == pb.getPcode())
 				{
 					req.setAttribute("pbean", pb);
 					req.getRequestDispatcher("EditProduct.jsp").forward(req, resp);
