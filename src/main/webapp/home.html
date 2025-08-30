@@ -1,38 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Product Management System</title>
-    <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Hub - Home</title>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
 
-    <header>
-    
-    <h1>Sports Hub </h1>
-       <a href="home.html">Home</a>
-       <a href="about.html">About</a>
-        <a href="CustomerLogin.html">Customer-Login</a>
-        <a href="AdminLogin.html">Admin-Login</a>
-        <a href="Register.html">Register</a>
-        
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="logo">🏆 Sports Hub</div>
+    <nav>
+      <a href="home.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="CustomerLogin.html">Customer Login</a>
+      <a href="AdminLogin.html">Admin Login</a>
+      <a href="Register.html">Register</a>
+    </nav>
+  </header>
 
-    <main>
-    <h2>Welcome To My Home Page</h2>
-        
-        <h3>Manage your products efficiently and effectively</h3>
-    </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unleash Your <span>Sports Spirit</span></h1>
+      <p>Gear up with premium kits, shoes, and accessories designed for champions.</p>
+      <button onclick="window.location.href='about.html'">Get Started</button>
+    </div>
+    <button class="scroll-btn" id="scrollBtn">↓</button>
+  </section>
 
-    <footer>
-        <p>&copy; All Rights Reserved</p>
-        <h4>Developed By Sambit Kumar Swain</h4>
-        <h5>connect With me</h5>
-        <a href="https://www.linkedin.com/in/sambit-kumar-swain-92a413257/">linkedln</a>
-        <a href="https://github.com/9861164945">Github</a>
-        <a href="https://www.instagram.com/softdevsambit7/">Instagram</a>
+  <!-- Why Choose Us -->
+  <main id="nextSection">
+    <h2>Why Choose <span>Sports Hub?</span></h2>
+    <div class="highlights">
+      <div class="card">🏏 Cricket Kits <br><small>Best quality bats & gear</small></div>
+      <div class="card">⚽ Football <br><small>Accessories & balls</small></div>
+      <div class="card">👟 Sports Shoes <br><small>Comfort & durability</small></div>
+      <div class="card">🎽 Jerseys <br><small>Stylish & breathable</small></div>
+    </div>
+  </main>
 
-    </footer>
+  <!-- Trophy Section -->
+  <section class="trophy-section" id="trophies">
+    <h2>🏆 Our Achievements</h2>
+    <p>Proud moments that define our journey in the world of sports.</p>
+    <div class="trophies">
+      <div class="trophy">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Trophy">
+        <h3>Best Team 2023</h3>
+        <p>Recognized for outstanding performance and teamwork.</p>
+      </div>
+      <div class="trophy">
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Trophy">
+        <h3>National Champions</h3>
+        <p>Winners of the prestigious National Championship.</p>
+      </div>
+      <div class="trophy">
+        <img src="https://cdn-icons-png.flaticon.com/512/1826/1826550.png" alt="Trophy">
+        <h3>Fair Play Award</h3>
+        <p>Awarded for exceptional sportsmanship and integrity.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <p>&copy; 2025 Sports Hub | All Rights Reserved</p>
+      <p><strong>Developed By Sambit Kumar Swain</strong></p>
+    </div>
+    <div class="footer-bottom">
+      <h5>Connect With Developer:</h5>
+      <a href="https://www.linkedin.com/in/sambit-kumar-swain-92a413257/">LinkedIn</a> |
+      <a href="https://github.com/9861164945">GitHub</a> |
+      <a href="https://www.instagram.com/softdevsambit7/">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
 </body>
 </html>

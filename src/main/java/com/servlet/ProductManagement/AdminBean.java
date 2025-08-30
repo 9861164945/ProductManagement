@@ -7,40 +7,52 @@ public class AdminBean implements Serializable
 {
 	private String uname,pword,fname,city,email;
 	private long phNo;
-	public String getuName() {
+	public String getuName() 
+	{
 		return uname;
 	}
-	public String getPword() {
+	public String getPword() 
+	{
 		return pword;
 	}
-	public String getFname() {
+	public String getFname() 
+	{
 		return fname;
 	}
-	public String getCity() {
+	public String getCity()
+	{
 		return city;
 	}
-	public String getEmail() {
+	public String getEmail()
+	{
 		return email;
 	}
-	public long getPhNo() {
+	public long getPhNo()
+	{
 		return phNo;
 	}
-	public void setuName(String uName) {
+	public void setuName(String uName)
+	{
 		this.uname = uName;
 	}
-	public void setPword(String pword) {
+	public void setPword(String pword) 
+	{
 		this.pword = pword;
 	}
-	public void setFname(String fname) {
+	public void setFname(String fname) 
+	{
 		this.fname = fname;
 	}
-	public void setCity(String city) {
+	public void setCity(String city)
+	{
 		this.city = city;
 	}
-	public void setEmail(String email) {
+	public void setEmail(String email) 
+	{
 		this.email = email;
 	}
-	public void setPhNo(long phNo) {
+	public void setPhNo(long phNo) 
+	{
 		this.phNo = phNo;
 	}
 	

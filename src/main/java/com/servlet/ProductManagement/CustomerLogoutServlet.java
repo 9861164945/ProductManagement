@@ -12,12 +12,15 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/clogout")
 public class CustomerLogoutServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
         HttpSession hs = req.getSession(false); // Get session without creating a new one
 
-        if (hs == null) {
+        if (hs == null) 
+        {
             req.setAttribute("msg", "Logout Failed");
-        } else {
+        } else 
+        {
             hs.removeAttribute("cbean"); // Remove user session data
             hs.invalidate(); // Invalidate session
             req.setAttribute("msg", "Customer Logout Successfully"); // Set message in request scope

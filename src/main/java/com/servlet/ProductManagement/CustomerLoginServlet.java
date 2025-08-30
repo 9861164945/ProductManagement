@@ -16,7 +16,8 @@ public class CustomerLoginServlet  extends HttpServlet
 {
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+	{
 		
 		 String cuname=req.getParameter("cuname");
 		 String cpword=req.getParameter("cpword");

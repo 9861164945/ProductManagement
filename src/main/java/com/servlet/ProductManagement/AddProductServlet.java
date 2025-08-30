@@ -13,7 +13,8 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/add")
 public class AddProductServlet  extends HttpServlet
 { @Override
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+{
 
 	HttpSession hs=req.getSession();//accessing Existing Session
 

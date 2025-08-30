@@ -14,11 +14,12 @@ public class CustomerLoginDao
 			Connection con=DbConnection.getCon();
 			if(con==null) 
 			{
-				System.out.println("Database Connection Failed");
+				System.out.println("Database Connection Failed for Customer..");
 				
 			}
 			PreparedStatement ps=con.prepareStatement("Select * from Customer79 where LOWER(cuname)=LOWER(?) AND LOWER(cpword)=LOWER(?)");
-			ps.setString(1, cuname.toLowerCase());//check both uppercase and Lower Case
+			ps.setString(1, cuname.toLowerCase());
+			//check both uppercase and Lower Case
 			ps.setString(2, cpword.toLowerCase());
 			
 			ResultSet rs=ps.executeQuery();
@@ -35,7 +36,8 @@ public class CustomerLoginDao
 				
 				
 			}
-			else {
+			else 
+			{
 				System.out.println("User not Found");
 			}
 			

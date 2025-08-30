@@ -1,5 +1,6 @@
 package com.servlet.ProductManagement;
 
-public class CustomerDao {
+public class CustomerDao 
+{
 
 }

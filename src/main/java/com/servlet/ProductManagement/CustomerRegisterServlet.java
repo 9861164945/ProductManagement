@@ -13,7 +13,8 @@ public class CustomerRegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
         HttpSession session = req.getSession();
 
         CustomerBean cb = new CustomerBean();
@@ -28,11 +29,13 @@ public class CustomerRegisterServlet extends HttpServlet {
         ResgisterDao dao = new ResgisterDao();
         int result = dao.insert(cb);
 
-        if (result > 0) {
+        if (result > 0) 
+        {
             session.setAttribute("cbean", cb);
             req.setAttribute("msg", "Registration Successful!");
             req.getRequestDispatcher("CustomerRegisterSuccess.jsp").forward(req, resp);
-        } else {
+        } else 
+        {
             req.setAttribute("msg", "Registration Failed due to something went Worng!");
             req.getRequestDispatcher("Msg.jsp").forward(req, resp);
         }

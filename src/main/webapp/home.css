@@ -1,58 +1,188 @@
-body 
-{
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color:#34495e;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
+/* Header */
+header {
+  background: linear-gradient(90deg, #00416a, #e4e5e6);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
-header
-{
-background-color: #FEBD69;
-color:red;
-padding: 10px 0;
-text-align: center;
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: gold;
 }
-header a 
-{
-color: #fff;
-text-decoration: none;
-margin: 0 15px;
-font-size: 18px;
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
-header a:hover
-{
-text-decoration: underline;
+header nav a:hover,
+header nav a.active {
+  color: gold;
 }
-h1
-{
-color:green;
-       
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1603279165811-3b0468b4d1d6") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
-h1:hover
-{
-border:1px dotted black;
+.hero-content {
+  max-width: 700px;
 }
-        
-main{
-text-align: center;
-padding: 50px;
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
-main h1
-{
-color: #333;
+.hero-content span {
+  color: gold;
 }
-main h3 
-{
-color: #555;
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
-footer
-{
-background-color:#131A22;
-color: #fff;
-text-align: center;
-padding: 10px;
-position: fixed;
-bottom: 0;
-width: 100%;
+.hero-content button {
+  padding: 12px 30px;
+  background: gold;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
+.hero-content button:hover {
+  background: darkgoldenrod;
+  color: #fff;
+}
+.scroll-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #00416a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+}
+
+/* Main Section */
+main {
+  padding: 80px 40px;
+  text-align: center;
+  background: #fff;
+}
+main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00416a;
+}
+main span {
+  color: gold;
+}
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  flex: 1 1 200px;
+  transition: transform 0.3s, background 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  background: #fff8e1;
+}
+
+/* Trophy Section */
+.trophy-section {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
+  text-align: center;
+}
+.trophy-section h2 {
+  font-size: 2.5rem;
+  color: #00416a;
+  margin-bottom: 10px;
+}
+.trophy-section p {
+  margin-bottom: 40px;
+  color: #555;
+  font-size: 1.1rem;
+}
+.trophies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.trophy {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.trophy img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+.trophy h3 {
+  color: #2a5298;
+  margin-bottom: 10px;
+}
+.trophy p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.trophy:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+  background: #1e1e1e;
+  color: #ccc;
+  text-align: center;
+  padding: 40

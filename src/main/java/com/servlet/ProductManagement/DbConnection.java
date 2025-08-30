@@ -10,7 +10,8 @@ public class DbConnection
 	private  void DBonnection() {}
 
 		static//Start Of Static Block 
-		{try 
+		{
+			try 
 		{
 			Class.forName(DBInfo.driver);
 			con=DriverManager.getConnection(DBInfo.dbUrl,DBInfo.dbUname,DBInfo.dbPword);
@@ -19,7 +20,7 @@ public class DbConnection
 		}
 		catch (Exception e)
 		{
-		e.printStackTrace();	
+	System.err.println("Something went Wrong While COnntecting the Database" + e.getMessage()) ;
 		}
 		
 	}//end of static block
